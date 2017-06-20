@@ -1,0 +1,12 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt the following lines:
+	name = kliner
+	email = kliner@live.cn
+
+[alias]
+    co = checkout
+    br = branch
+    ci = commit
+    st = status
+

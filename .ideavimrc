@@ -1,0 +1,59 @@
+syntax enable
+set background=dark
+colorscheme solarized
+
+" General setting {{{
+" Use Vim settings, rather then Vi settings (much better!).
+" This must be first, because it changes other options as a side effect.
+set nocompatible
+
+
+" filetype plugin indent on       " load file type plugins and indentation
+let mapleader = ";"
+
+set fileencodings=utf-8,gbk,big5,cp936,ucs-bom
+set history=1000                " keep 1000 lines of command line history
+set hidden                      " allow hidden buffers
+set mouse=a                     " enable mouse
+set noequalalways               " disable making windows the same size after splitting or closing
+set completeopt=menu,longest,preview
+
+" Style
+set showcmd                     " display incomplete commands
+set ruler                       " show the cursor position all the time
+set nowrap                      " don't wrap lines
+set number                      " show line numbers
+set showmatch                   " show matching brackets
+" set autochdir                   " auto change the current working directory whenever opening a file
+set laststatus=2                " always shows status line
+" set spell                       " enable spell checking
+set cursorline                  " highlight the screen line of the cursor
+" set textwidth=78                " limit lines to 78 characters
+" set colorcolumn=78
+
+" Searching
+set incsearch                   " do incremental searching
+set hlsearch                    " highlight matches
+set ignorecase                  " searches are case insensitive...
+set smartcase                   " ... unless they contain at least one capital letter
+
+" Whitespace
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4                " auto-indent amount
+set shiftround                  " round indent to multiple of 'shiftwidth'
+set noexpandtab                   " expand tab to spaces according to shiftwidth
+set backspace=indent,eol,start  " allow backspacing over everything in insert mode
+set ts=4
+"set list                        " show invisible characters
+set listchars=tab:▸\ ,eol:¬,trail:⌴,extends:❯,precedes:❮ " tweak some invisible characters
+
+" Folding
+set foldmethod=syntax
+
+" Undo
+set undodir=~/.vim/undodir
+set undofile
+set undolevels=1000
+
+set guicursor=n-v-c-i:blinkon0
